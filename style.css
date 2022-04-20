@@ -1,3 +1,153 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
 body{
-    background-color:black;
+    background-color: #28293E;
+    font-family: 'Epilogue', sans-serif;
+}
+
+header{
+    font-family: 'Epilogue';
+    color: white;
+    text-align: center;
+}
+
+header h1{
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 1.7rem;
+
+}
+
+header p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    margin-left: 2rem;
+
+    color: #BBB3E6;
+    letter-spacing: 2.0rem;
+    text-transform: uppercase;
+
+    margin-bottom: 8.0rem;
+
+
+}
+
+main{
+    display: grid;
+    gap: 3.2rem
+}
+
+#image-cards{
+    display: grid;
+    gap: 3.2rem;
+}
+
+
+#page-container{
+    width: 27rem;
+    margin: 10rem auto;
+
+}
+
+img{
+    width: 100%;
+    margin: auto;
+}
+
+#image-cards img{
+    height: 41.5rem;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    opacity: 0.7;
+    transition: all 200ms ease-in-out;
+
+}
+
+#image-cards img:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+
+
+#image-cards div{
+    position: relative;
+}
+
+#image-cards p, h2{
+    color: white;
+    position: absolute;
+    bottom: 5.2rem;
+    left: 1.5rem;
+
+}
+
+#image-cards p{
+    bottom: 8rem;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+
+    color: #090039;
+
+    background-color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2.0rem ;
+
+}
+
+#image-cards h2{
+
+    bottom: 2rem;
+    font-weight: 800;
+    font-size: 4.0rem;
+    line-height: 5.8rem;
+
+    color: #FFFFFF;
+}
+
+
+/*------------------------------ANIMATIONS-----------------------------*/
+
+header{
+    animation: top-bottom 700ms 300ms backwards; 
+}
+
+#image-cards div{
+    animation: bottom-top 700ms 500ms backwards;
+}
+
+
+@keyframes top-bottom{
+    0%{
+        opacity: 0;
+        transform:translateY(-15px)
+    }
+
+    100%{
+        opacity: 1;
+        transform:translateY(0px)
+    }
+}
+
+@keyframes bottom-top{
+    0%{
+        opacity: 0;
+        transform: translateY(15px)
+    }
+
+    100%{
+        opacity: 1;
+        transform:translateY(0px)
+    }
 }
